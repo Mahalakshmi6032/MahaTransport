@@ -1,0 +1,229 @@
+<br><br>
+<div class="content-container" style="background-color: blanchedalmond;">
+    <h1 style=" text-shadow:2px 2px blue;">Welcome to Maha Transports Grocery Delivery</h1><br>
+    <b>
+        <p style="font-size: 1.4em;">Your one-stop solution for visually selecting and receiving high-quality groceries
+            at your doorstep.</p>
+        <p style="font-size: 1.4em;">Experience the convenience of seamless delivery and a user-friendly interface,
+            backed by a variety of enticing
+            images.</p>
+    </b>
+    <!-- Add this section for tracking -->
+    <div class="container">
+        <h1 class="text-center">Parcel Tracking</h1>
+        <label for="trackBillNumber">Enter Bill Number:</label>
+        <input type="text" id="trackBillNumber" class="form-control" [(ngModel)]="trackBillNumber" /><br>
+        <button (click)="trackParcel()">Track Parcel</button>
+
+        <div *ngIf="trackedParcel">
+            <h2>Parcel Details</h2>
+            <p>Bill Number: {{ trackedParcel.billNumber }}</p>
+            <p>Status: {{ trackedParcel.status }}</p>
+            <!-- Add more details as needed -->
+        </div>
+    </div>
+
+
+</div>
+
+<br><br>
+<!-- carousel  -->
+<div id="demo" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+        <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+        <button type="button" data-bs-target="#demo" data-bs-slide-to="3"></button>
+    </div>
+    <div class="carousel-inner">
+        <div class="carousel-item active"><img src="assets/caro1.jpg" alt="image" class="d-block" style="width:100%">
+        </div>
+        <div class="carousel-item"><img src="assets/caro4.jpg" alt="image" class="d-block" style="width:100%"></div>
+        <div class="carousel-item"><img src="assets/caro3.jpg" alt="image" class="d-block" style="width:100%"></div>
+        <div class="carousel-item"><img src="assets/caro1.jpg" alt="image" class="d-block" style="width:100%"></div>
+    </div>
+    <button type="button" class="carousel-control-prev" data-bs-target="#demo" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span></button>
+    <button type="button" class="carousel-control-next" data-bs-target="#demo" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span></button>
+</div>
+<br>
+
+<!-- form -->
+<div class="container">
+    <h1 class="text-center">Quote Request</h1>
+    <form [formGroup]="quoteForm" (ngSubmit)="postdata()">
+        <div class="row">
+            <div class="col-md-6">
+                <!-- From Place -->
+                <div class="form-group">
+                    <label for="fromPlace">From Place:</label>
+                    <input type="text" id="fromPlace" class="form-control" formControlName="fromPlace">
+                </div>
+
+                <!-- To Place -->
+                <div class="form-group">
+                    <label for="toPlace">To Place:</label>
+                    <input type="text" id="toPlace" class="form-control" formControlName="toPlace">
+                </div>
+
+                <!-- Mobile No -->
+                <div class="form-group">
+                    <label for="mobileNo">Mobile No:</label>
+                    <input type="text" id="mobileNo" class="form-control" formControlName="mobileNo">
+                </div>
+
+                <!-- Email Address -->
+                <div class="form-group">
+                    <label for="emailAddress">Email Address:</label>
+                    <input type="email" id="emailAddress" class="form-control" formControlName="emailAddress">
+                </div>
+                <!-- Quantity -->
+                <div class="form-group">
+                    <label for="quantity">Quantity:</label>
+                    <input type="number" id="quantity" class="form-control" formControlName="quantity">
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <!-- Parcel Detail -->
+                <div class="form-group">
+                    <label for="parcelDetail">Parcel Detail:</label>
+                    <textarea id="parcelDetail" class="form-control" formControlName="parcelDetail"></textarea>
+                </div>
+
+
+
+                <!-- Load Type -->
+                <div class="form-group">
+                    <label for="loadType">Load Type:</label>
+                    <select id="loadType" class="form-control" formControlName="loadType">
+                        <option *ngFor="let type of loadTypes" [value]="type">{{ type }}</option>
+                    </select>
+                </div>
+
+                <!-- Pickup Location -->
+                <div class="form-group">
+                    <label for="pickupLocation">Pickup Location:</label>
+                    <select id="pickupLocation" class="form-control" formControlName="pickupLocation">
+                        <option *ngFor="let location of pickupLocations" [value]="location">{{ location }}</option>
+                    </select>
+                </div>
+
+                <!-- Drop Location -->
+                <div class="form-group">
+                    <label for="dropLocation">Drop Location:</label>
+                    <input type="text" id="dropLocation" class="form-control" formControlName="dropLocation">
+                </div>
+
+                <!-- Weight -->
+                <div class="form-group">
+                    <label for="weight">Weight:</label>
+                    <input type="number" id="weight" class="form-control" formControlName="weight">
+                </div>
+                <br>
+                <!-- Submit Button -->
+                <div class="form-group text-center">
+                    <button type="submit" class="btn btn-warning">Submit Quote</button>
+                </div>
+
+            </div>
+        </div>
+    </form>
+</div>
+<br><br>
+<!-- about page -->
+
+<div class="content-container shadow-lg" id="truck" style="background-color: bisque;">
+    <div class="row">
+        <div class="col-md-6  ">
+            <h1 style="font-size: 2em;  text-shadow:2px 2px blue;">WHO WE ARE</h1>
+            <p style="font-size: 1.4em;">Transports is one of the popular Parcel and Cargo Service companies in South
+                India, since 1993. Our seamless and optimized services give you enhanced productivity and efficiency
+                through the Daily Regular Express. We have branches all over Tamilnadu, Pondicherry, Karnataka, Andhra,
+                Hyderabad, Telangana. Company-owned warehouses in all District headquarters, Dedicated team of
+                employees, Richly experienced Agents Network, Trained Drivers, Own Workshop, Well-trained technicians,
+                Computerized operations at Branches, Computerized central tracking of cargo.</p>
+            <button type="button" class="btn btn-lg btn-warning  d-block mx-auto" (click)="navigation()">Read
+                more</button>
+        </div>
+        <div class="col-md-6">
+            <img src="assets/truck.png" alt="image" style="width: 100%; height: auto;">
+        </div>
+    </div>
+</div>
+
+<br>
+<div class=" content-container" style="padding: 50px 20px;">
+    <div class="row">
+        <div class="col-lg-3 mb-4">
+            <div class="shadow-lg bg-white rounded p-4">
+
+                <b class="h4" style="text-shadow:0px 2px blue;">Full Truck Carriers</b><br><br>
+                <img src="assets/service1.png" alt="image" class="d-block mx-auto img-fluid" style="max-width: 100%;" />
+            </div>
+        </div>
+        <div class="col-lg-3 mb-4">
+            <div class="shadow-lg bg-white rounded p-4">
+                <b class="h4" style="text-shadow:0px 2px blue;">Part Load Carriers</b><br><br>
+                <img src="assets/service2.png" alt="image" class="d-block mx-auto img-fluid" style="max-width: 100%;" />
+            </div>
+        </div>
+        <div class="col-lg-3 mb-4">
+            <div class="shadow-lg bg-white rounded p-4">
+                <b class="h4" style="text-shadow:0px 2px blue;">Ware House Service</b><br><br>
+                <img src="assets/service3.png" alt="image" class="d-block mx-auto img-fluid" style="max-width: 100%;" />
+            </div>
+        </div>
+        <div class="col-lg-3 mb-4">
+            <div class="shadow-lg bg-white rounded p-4">
+                <b class="h4" style="text-shadow:0px 2px blue;"> Delivery to Shipment</b><br><br>
+                <img src="assets/service4.png" alt="image" class="d-block mx-auto img-fluid" style="max-width: 100%;" />
+            </div>
+        </div>
+    </div>
+</div>
+<br><br>
+<footer>
+    <div class="footer-col">
+        <h4>MAHA</h4>
+        <ul>
+            <li><a href="#"> 18.7.267, Union School Street,</a></li>
+            <li><a href="#">Surandai-627 859.</a></li>
+            <li><a href="#">Phone: 6381634591</a></li>
+            <li><a href="#">Email:ak2maha@gmail.com</a></li>
+        </ul>
+    </div>
+    <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Service</a></li>
+            <li><a href="#">contact</a></li>
+            <li><a href="#">Location</a></li>
+        </ul>
+    </div>
+    <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+            <li><a href="#"> Full Truck Carriers</a></li>
+            <li><a href="#">Part Load Carriers</a></li>
+            <li><a href="#">Ware House Service</a></li>
+            <li><a href="#">Delivery to Shipment</a></li>
+        </ul>
+    </div>
+    <div class="footer-col">
+        <h4>follow us</h4>
+        <div class="links">
+            <a href="https://wa.me/6381634591"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://www.facebook.com/username/"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://twitter.com/username"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/username/"><i class="fab fa-instagram"></i></a>
+        </div>
+    </div>
+</footer>
+
+
+
+

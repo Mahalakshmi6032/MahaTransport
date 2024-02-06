@@ -1,0 +1,46 @@
+<nav class="navbar navbar-expand-xl navbar-dark bg-dark sticky-top">
+    <div class="container">
+  
+      <a class="navbar-brand fs-2 fw-bold logo" href="#">
+        <!-- <img src="assets/ip.png" style="height:100px; width: 100px;"
+          alt="logo"> -->
+          <i class="bi bi-moon-stars"></i>
+        <span class="text-danger ps-3">MAHA</span> <span class="ps-3">Transports</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarDark">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse show" id="navbarDark">
+        <ul class="navbar-nav ms-auto mb-2 mb-xl-0 fs-5 ms-auto p-2 text-center">
+          <li class="nav-item me-4">
+            <a class="nav-link active " [routerLink]="['home']" aria-current="page" href="#"><i
+                class="bi bi-house-check-fill"></i><b>Home</b></a>
+          </li>
+          <li class="nav-item me-4">
+            <a class="nav-link" href="#" [routerLink]="['about']"><i class="bi bi-file-person-fill"></i><b>About Us</b></a>
+          </li>
+          <li class="nav-item me-4">
+            <a class="nav-link" href="#" [routerLink]="['service']"><i class="bi bi-safe2-fill"></i><b>Service</b></a>
+          </li>
+          <li class="nav-item me-4">
+            <a class="nav-link" href="#" [routerLink]="['feedback']"><i class="bi bi-shield-fill-check"></i><b>Feedback</b></a>
+          </li>
+          <li class="nav-item me-4">
+            <a class="nav-link" href="#" [routerLink]="['contact']"><i
+                class="bi bi-telephone-outbound-fill"></i><b>Contact</b></a>
+          </li>
+          <li class="nav-item me-4">
+            <a class="nav-link" href="#" [routerLink]="['location']"><i class="bi bi-geo-alt-fill"></i><b>Location</b></a>
+          </li>
+  
+  
+        </ul>
+  
+      </div>
+  
+    </div>
+  </nav>
+  
+  
+  
+  <router-outlet></router-outlet>
+  

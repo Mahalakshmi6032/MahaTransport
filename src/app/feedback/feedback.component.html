@@ -1,0 +1,109 @@
+<br><br>
+
+<div class="content-container " style="background-color: blanchedalmond;">
+    
+    <b><p style="font-size: 1.4em;">We shall strive towards providing Prompt and Positive Team perofrmance with on time delivery of goods committed to providing safe, dependable 
+        transportation service to our customers. Our competitive rate is also a major strength of our success.
+        </p>
+    <p style="font-size: 1.4em;">We are committed in achieving Customer Delight and to the Pursuit of Excellence through constant improvement in Quality Transport Services, continuous enhancement of Human Resources
+         and ceaseless endeavour to provide Customised Solutions.</p></b>
+  
+  
+  </div>
+<br>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <img src="assets/feed1.png" alt="image" class="d-block mx-auto img-fluid" style="max-width: 100%;" />
+
+            <img src="assets/feed2.png" alt="image" class="d-block mx-auto img-fluid" style="max-width: 100%;" />
+        </div>
+        <div class="col-md-6">
+            <h1 class="text-center">Customer Feedback</h1>
+            <form [formGroup]="feedForm" (ngSubmit)="feeddata()">
+                <!-- Your form fields go here -->
+                <div class="form-group">
+                    <label for="firstname">First Name:</label>
+                    <input type="text" id="firstname" class="form-control" formControlName="firstname">
+                </div>
+
+                <!-- To Place -->
+                <div class="form-group">
+                    <label for="lastname">Last Name:</label>
+                    <input type="text" id="lastname" class="form-control" formControlName="lastname">
+                </div>
+
+                <!-- Mobile No -->
+                <div class="form-group">
+                    <label for="mobileNo">Mobile No:</label>
+                    <input type="text" id="mobileNo" class="form-control" formControlName="mobileNo">
+                </div>
+
+                <!-- Email Address -->
+                <div class="form-group">
+                    <label for="emailAddress">Email Address:</label>
+                    <input type="email" id="emailAddress" class="form-control" formControlName="emailAddress">
+                </div>
+                <!-- message -->
+                <div class="form-group">
+                    <label for="message">Feedback:</label>
+                    <textarea id="message" class="form-control" formControlName="message"></textarea>
+                </div>
+                <br>
+                <div class="form-group text-center">
+                    <button type="submit" class="btn btn-warning">Send Feedback</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+
+<br>
+
+<footer>
+    <div class="footer-col">
+        <h4>MAHA</h4>
+        <ul>
+            <li><a href="#"> 18.7.267, Union School Street,</a></li>
+            <li><a href="#">Surandai-627 859.</a></li>
+            <li><a href="#">Phone: 6381634591</a></li>
+            <li><a href="#">Email:ak2maha@gmail.com</a></li>
+        </ul>
+       
+
+
+
+    </div>
+    <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Service</a></li>
+            <li><a href="#">contact</a></li>
+            <li><a href="#">Location</a></li>
+        </ul>
+    </div>
+    <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+            <li><a href="#"> Full Truck Carriers</a></li>
+            <li><a href="#">Part Load Carriers</a></li>
+            <li><a href="#">Ware House Service</a></li>
+            <li><a href="#">Delivery to Shipment</a></li>
+        </ul>
+    </div>
+    <div class="footer-col">
+        <h4>follow us</h4>
+        <div class="links">
+            <a href="https://wa.me/6381634591"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://www.facebook.com/username/"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://twitter.com/username"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/username/"><i class="fab fa-instagram"></i></a>
+        </div>
+    </div>
+</footer>
+

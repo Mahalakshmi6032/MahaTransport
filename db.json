@@ -1,0 +1,27 @@
+{
+  "posts": [
+    {
+      "id": "d04a",
+      "fromPlace": "surandai",
+      "toPlace": "tenkasi",
+      "mobileNo": "9134567845",
+      "emailAddress": "ak2viji@gmail.com",
+      "parcelDetail": "courier",
+      "quantity": 2,
+      "loadType": "Full",
+      "pickupLocation": "MSS Office",
+      "dropLocation": "tenkasi",
+      "weight": 4
+    }
+  ],
+  "feeds": [
+    {
+      "id": "c38d",
+      "firstname": "viji",
+      "lastname": "lakshmi",
+      "mobileNo": "9134567845",
+      "emailAddress": "ak2viji@gmail.com",
+      "message": "gud"
+    }
+  ]
+}
